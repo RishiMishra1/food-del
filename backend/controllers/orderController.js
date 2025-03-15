@@ -11,7 +11,7 @@ console.log("Stripe Secret Key:", process.env.STRIPE_SECRET_KEY); // Ensure this
 
 // Placing user order from front end
 const placeOrder = async (req, res) => {
-    const frontend_url = "http://localhost:5174";
+    const frontend_url = "https://food-del-frontend-zc2l.onrender.com";
     try {
         const newOrder = new orderModel({
             userId: req.body.userId,
