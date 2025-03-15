@@ -1,0 +1,143 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.navbar-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    list-style-type: none;
+    font-size: 17px;
+    margin: 0px 10px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar-menu li a{
+    transition: 0.3s ease;
+}
+
+.navbar-menu li{
+    position: relative;
+}
+
+.navbar-menu li a:hover::after{
+    content: "";
+    width: 70%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+}
+
+.navbar .logo{
+    width: 150px;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar button{
+    background: transparent;
+    outline: none;
+    padding: 10px 15px;
+    border: 1px solid tomato;
+    border-radius: 50px;
+}
+
+.navbar button:hover{
+    background-color: tomato;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: white;
+}
+
+.navbar-search-icon{
+    position: relative;
+}
+
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-profile{
+    position: relative;
+}
+
+
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.nav-profile-dropdown img{
+    width: 20px;
+
+}
+.nav-profile-dropdown li:hover{
+    color: tomato;
+}
+@media (max-width:750px){
+    .navbar-menu{
+        display: none;
+
+    }
+}
+
+@media (max-width:800px){
+    .navbar-menu{
+        display: none;
+    }
+    .navbar-right{
+        gap: 10px;
+    }
+    .navbar button{
+        
+        outline: none;
+        padding: 3px 7px;
+        border: 1px solid tomato;
+    }
+    .navbar-search-icon img{
+        font-size: 10px;
+    }
+    .navbar .logo {
+        width: 100px;
+    }
+}
+
